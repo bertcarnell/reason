@@ -77,9 +77,6 @@ testthat::test_that("lm with multiple predictors ranks by absolute contribution"
   lm2 <- lm(mpg ~ cyl + disp + hp + wt, data = mtcars[-(1:5), ])
   rc2 <- reason_code(lm2, mtcars[1:5, ], n_reasons = 4L)
   for (i in seq_len(nrow(rc2$reasons))) {
-    contribs <- abs(as.numeric(rc2$contributions[i, ]))
-    ranked   <- rc2$reasons[i, grep("^reason_[0-9]+$", names(rc2$reasons))]
-    # Confirm decreasing order of absolute contributions
     abs_vals <- abs(as.numeric(
       rc2$reasons[i, grep("contribution", names(rc2$reasons))]
     ))
