@@ -1,6 +1,6 @@
 Package: reason
 Title: Model-specific Reason Codes for Predicted Values
-Version: 0.0.1
+Version: 0.2.0
 Authors@R: 
     person(given = "Robert",
            family = "Carnell",
@@ -11,7 +11,9 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
-Suggests: 
+RoxygenNote: 7.3.2
+Suggests:
+    glmnet,
+    survival,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
